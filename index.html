@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="scss/style.css">
+    <title>test Veepee</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="destinations.json"></script>
+    <script src="https://kit.fontawesome.com/135e155ecb.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+
+    <div class="page">
+
+          <!-- Voici notre en‑tête principale utilisée dans notre site web -->
+
+      <header>
+        <h1>DÉCOUVREZ LES OFFRES DU MOMENT</h1>
+        <h2>VOL + HÔTEL JUSQU'À -70%</h2>
+        <div id="trait_dessous1"></div>
+      </header>
+
+      <div class="bouton"><button><i class="fas fa-sliders-h"></i> DESTINATIONS</button><button><i class="fas fa-chevron-down"></i></i></button></div>
+
+      <!-- Ici nous mettons le contenu de la page -->
+
+        <div class="container">
+          <div class="flex">
+            <div class="item-flex" id="item">
+          </div>
+        </div>
+      </div>
+
+      <!-- Et voici notre pied de page utilisé sur toutes les pages du site -->
+
+      <footer>
+        <p>REJOIGNEZ <span class='join'>EMIRATES | JOIN US</span><br> VOL + HÔTEL NÉGOCIÉS JUSQU'À -70%<br></p>
+        <div id="trait_dessous2"></div>
+      </footer>
+    </div>
+
+    <!-- Et voici notre script utilisé pour l'affichage de nos item -->
+
+    <script>
+      $(function() {
+        $.getJSON('destinations.json', function(data) {
+          $.each(data.destinations, function(i, f) {
+            var link = "";
+            if (f.country == "Emirates Arabes Unis" && i == 0) {
+              link = "img/HYATT_REGENCY_CREEK.png"
+            }
+            else if (f.country == "Maurice") {
+              link = "img/LAGUNA_BEACH.png"
+            }
+            else if (f.country == "Emirates Arabes Unis") {
+              link = "img/FAIRMONT_DUBAI.png"
+            }
+            else if (f.country == "Indonésie") {
+              link = "img/STHALA_MARC_PATRA.png"
+            }
+            else if (f.country == "Maldives") {
+              link = "img/NOKU_MALDIVES.png"
+            }
+            else if (f.country == "Thaïlande") {
+              link = "img/IMPIANA_RESORT_SAMUI.png"
+            }
+            else if (f.country == "Maurice") {
+              link = "img/CLOS_DU_LITTORAL.png"
+            }
+            else if (f.country == "Sri Lanka") {
+              link = "img/ECHAPEE_SRI_LANKAISE.png"
+            }
+            else if (f.country == "Japon") {
+              link = "img/JAPON.jpg"
+            }
+            else {
+              link = "img/ENTRE_CULTURE_ET_PLAGES.png"
+            }
+          $('#item').append(
+              `	<div class="items">
+                  <img src="${link}" alt="clos">
+                  <div class="sub">
+                    <div class="sub-text">
+                      <p><span class="country">${f.country} - </span>${f.place}</p>
+                      <p>${f.label} ${f.rating}</p>
+                      <p class="premium">
+                        ${f.tags.map(e => {
+                          return (
+                            `${e.label}`
+                          )
+                        })}
+                      </p>
+                    </div>
+                    <button><i class="fas fa-angle-right"></i></button>
+                  </div>
+              </div>`
+                )
+            });
+        });
+      })
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'Black';
+  src: url("../fonts/SevenOneEight-Black.ttf");
+}
+
+@font-face {
+  font-family: 'Book';
+  src: url("../fonts/SevenOneEight-Book.ttf");
+}
+
+@font-face {
+  font-family: 'ExtraBold';
+  src: url("../fonts/SevenOneEight-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: 'Light';
+  src: url("../fonts/SevenOneEight-Light.ttf");
+}
+
+@font-face {
+  font-family: 'Medium';
+  src: url("../fonts/SevenOneEight-Medium.ttf");
+}
+
+body {
+  background-color: #efefef;
+  font-family: 'Book';
+  margin: 0;
+}
+
+.page {
+  width: 70%;
+  margin: 0 auto;
+}
+
+header,
+.container,
+footer {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+header h1 {
+  font-family: "ExtraBold";
+  color: #d92e22;
+  margin-bottom: 0;
+}
+
+header h2 {
+  font-family: "Light";
+  color: #6a6a6a;
+  margin-top: 0;
+}
+
+.fa-sliders-h:before {
+  color: #ed3323;
+}
+
+.fa-chevron-down:before {
+  color: #ed3323;
+}
+
+#trait_dessous1 {
+  margin: auto;
+  background-color: #000;
+  width: 210px;
+  height: 7px;
+}
+
+.bouton {
+  font: 'Book';
+  background: #EFEFEF;
+  text-align: center;
+  margin: 50px;
+}
+
+.container {
+  height: 513px;
+  overflow: auto;
+}
+
+#item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.items {
+  width: 30%;
+  margin-bottom: 8px;
+}
+
+.items img {
+  width: 100%;
+}
+
+.sub {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 4px;
+}
+
+.sub-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Light";
+}
+
+.sub p {
+  margin: 2px;
+}
+
+.premium {
+  background-color: black;
+  color: white;
+}
+
+.country {
+  font-family: "ExtraBold";
+}
+
+.sub button {
+  margin-left: auto;
+  background-color: #ed3323;
+  width: 50px;
+  height: 50px;
+}
+
+.fa-angle-right:before {
+  color: white;
+}
+
+footer {
+  height: 87px;
+  background-color: #000;
+  color: white;
+  font-size: 1rem;
+  font-family: 'Book';
+  text-align: center;
+  margin-top: 90px;
+}
+
+.join {
+  font-family: "Black";
+}
+
+#trait_dessous2 {
+  margin: auto;
+  padding-top: 2px;
+  background-color: #f70909;
+  width: 220px;
+  height: 1px;
+}
+/*# sourceMappingURL=style.css.map */
